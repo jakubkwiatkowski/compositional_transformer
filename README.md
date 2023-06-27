@@ -7,8 +7,10 @@ For usage examples, please refer to the:
 ....
 
 ![sudoku](docs/images/sudoku.gif)
-![sudoku](docs/images/raven.png)
 
+![example](docs/images/example.png)
+![example_2](docs/images/example_2.png)
+![sudoku](docs/images/raven.png)
 
 This library includes a few utilities that were either copied or modified from code examples published by the Keras community. The original code can be found on the Keras website at [keras.io/examples](https://keras.io/examples/). There are many useful resources on building transformers using Keras available on their website. 
 
