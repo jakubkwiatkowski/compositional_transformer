@@ -1,7 +1,7 @@
 # Grid Transformer
 The Grid Transformer is a research library that offers utilities for building transformer models for grid-like input data. This includes data samples that consist of sets of objects with relational relationships, such as Raven Matrices or Sudoku puzzles.
 
-It was developed for research purposes by the Neurosymbolic Systems Lab at Poznan University of Technology and the [Poznań Supercomputing and Networking Center](https://www.psnc.pl/). 
+It was developed for research purposes by the Neurosymbolic Systems Lab at Poznan University of Technology.
 
 For usage examples, please refer to the:
 ....
