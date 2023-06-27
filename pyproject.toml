@@ -1,0 +1,10 @@
+[tool.portray.mkdocs.theme]
+name = "material"
+palette = {scheme = "slate", primary = "indigo", accent = "indigo"}
+
+[tool.commitizen]
+version = "0.2.2"
+version_files = [
+    "setup.py",
+]
+

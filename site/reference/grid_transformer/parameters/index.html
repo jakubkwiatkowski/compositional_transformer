@@ -1,0 +1,2150 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.4">
+    
+    
+      
+        <title>Parameters - grid_transformer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.80dcb947.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-grid_transformerparameters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="grid_transformer" class="md-header__button md-logo" aria-label="grid_transformer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            grid_transformer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parameters
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jakubkwiatkowski/grid_transformer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    grid_transformer
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="grid_transformer" class="md-nav__button md-logo" aria-label="grid_transformer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    grid_transformer
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jakubkwiatkowski/grid_transformer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    grid_transformer
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/raven/" class="md-nav__link">
+        Raven
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/sudoku/" class="md-nav__link">
+        Sudoku
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Grid Transformer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Grid Transformer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Grid Transformer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augmentation/" class="md-nav__link">
+        Augmentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augmented_transformer/" class="md-nav__link">
+        Augmented Transformer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grid_transformer/" class="md-nav__link">
+        Grid Transformer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layers/" class="md-nav__link">
+        Layers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mask/" class="md-nav__link">
+        Mask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Parameters
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Parameters
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bigtransformerparameters" class="md-nav__link">
+    BigTransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="BigTransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gridtransformerparameters" class="md-nav__link">
+    GridTransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="GridTransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_1" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_1" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#largetransformerparameters" class="md-nav__link">
+    LargeTransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="LargeTransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_2" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_2" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#midtransformerparameters" class="md-nav__link">
+    MidTransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="MidTransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_3" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_3" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smalltransformerparameters" class="md-nav__link">
+    SmallTransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="SmallTransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_4" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_4" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformerparameters" class="md-nav__link">
+    TransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="TransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes_1" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descendants" class="md-nav__link">
+    Descendants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_5" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../position_embedding/" class="md-nav__link">
+        Position Embedding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocessing/" class="md-nav__link">
+        Preprocessing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simple_transformer/" class="md-nav__link">
+        Simple Transformer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformer/" class="md-nav__link">
+        Transformer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformer_block/" class="md-nav__link">
+        Transformer Block
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bigtransformerparameters" class="md-nav__link">
+    BigTransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="BigTransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gridtransformerparameters" class="md-nav__link">
+    GridTransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="GridTransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_1" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_1" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#largetransformerparameters" class="md-nav__link">
+    LargeTransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="LargeTransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_2" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_2" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#midtransformerparameters" class="md-nav__link">
+    MidTransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="MidTransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_3" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_3" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smalltransformerparameters" class="md-nav__link">
+    SmallTransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="SmallTransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_4" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_4" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformerparameters" class="md-nav__link">
+    TransformerParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="TransformerParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes_1" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descendants" class="md-nav__link">
+    Descendants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_5" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/jakubkwiatkowski/grid_transformer/edit/main/reference/grid_transformer/parameters.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="module-grid_transformerparameters">Module grid_transformer.parameters</h1>
+<p>The  module is a set of classes that define the parameters for Transformer models and GridTransformer models. The <code>TransformerParameters</code> class is a dataclass that holds the parameters for Transformer models, such as the number of layers, hidden state dimension, and dropout rate. The <code>GridTransformerParameters</code> class is a subclass of <code>TransformerParameters</code> that holds additional parameters specific to GridTransformer models, such as the extractor type, mapping function, and masking strategy.</p>
+<p>You can then pass the instance to a function or class that uses these parameters to define the architecture of the model.</p>
+<p>To use these classes, you can create an instance of the class with the desired values for the parameters. For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">asdict</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">TransformerParameters</span><span class="p">(</span><span class="n">no</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">dropout</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">transformer</span><span class="p">(</span><span class="n">asdict</span><span class="p">(</span><span class="n">params</span><span class="p">))</span>
+</code></pre></div>
+
+<p>For GridTransformerParameters:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">params</span> <span class="o">=</span> <span class="n">GridTransformerParameters</span><span class="p">(</span><span class="n">extractor</span><span class="o">=</span><span class="s1">&#39;ef&#39;</span><span class="p">,</span><span class="n">last</span><span class="o">=</span><span class="s1">&#39;start&#39;</span><span class="p">,</span><span class="n">last_index</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">row</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">return_attention_scores</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">grid_trans</span><span class="p">(</span><span class="n">asdict</span><span class="p">(</span><span class="n">params</span><span class="p">))</span>
+</code></pre></div>
+
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">The  module is a set of classes that define the parameters for Transformer models and GridTransformer models. The `TransformerParameters` class is a dataclass that holds the parameters for Transformer models, such as the number of layers, hidden state dimension, and dropout rate. The `GridTransformerParameters` class is a subclass of `TransformerParameters` that holds additional parameters specific to GridTransformer models, such as the extractor type, mapping function, and masking strategy.</span>
+
+<span class="sd">You can then pass the instance to a function or class that uses these parameters to define the architecture of the model.</span>
+
+<span class="sd">To use these classes, you can create an instance of the class with the desired values for the parameters. For example:</span>
+
+<span class="sd">```python</span>
+
+<span class="sd">from dataclasses import asdict</span>
+
+<span class="sd">params = TransformerParameters(no=6, size=256, dropout=0.2)</span>
+
+<span class="sd">model = transformer(asdict(params))</span>
+
+<span class="sd">```</span>
+
+<span class="sd">For GridTransformerParameters:</span>
+
+<span class="sd">```python</span>
+
+<span class="sd">params = GridTransformerParameters(extractor=&#39;ef&#39;,last=&#39;start&#39;,last_index=8,col=3,row=3,return_attention_scores=True)</span>
+
+<span class="sd">model = grid_trans(asdict(params))</span>
+
+<span class="sd">```</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span>
+
+<span class="nd">@dataclass</span>
+
+<span class="k">class</span> <span class="nc">TransformerParameters</span><span class="p">:</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Class that holds parameters for Transformer models.</span>
+
+<span class="sd">    :param pos_emd: Type of position embedding. Can be &#39;sum&#39; or &#39;cat&#39;.</span>
+
+<span class="sd">    :param no: Number of layers in the Transformer encoder.</span>
+
+<span class="sd">    :param size: Dimension of the hidden states and the self-attention layers.</span>
+
+<span class="sd">    :param ff_mul: Multiplier for the dimension of the feed-forward layers.</span>
+
+<span class="sd">    :param ff_size: Dimension of the feed-forward layers. If None, it is set to size * ff_mul.</span>
+
+<span class="sd">    :param dropout: Dropout rate for the self-attention and feed-forward layers.</span>
+
+<span class="sd">    :param num_heads: Number of heads in the multi-head self-attention layers.</span>
+
+<span class="sd">    :param ff_act: Activation function for the feed-forward layers. Can be &#39;relu&#39; or &#39;gelu&#39;.</span>
+
+<span class="sd">    :param extractor: Type of extractor to use before the transformer layers. Can be &#39;cnn&#39; or &#39;rnn&#39;.</span>
+
+<span class="sd">    :param extractor_pooling: Type of pooling to use after the extractor. Can be &#39;first&#39; or &#39;flat2d&#39;.</span>
+
+<span class="sd">    :param pooling: Type of pooling to use after the transformer layers. Can be &#39;first&#39; or &#39;mean&#39;.</span>
+
+<span class="sd">    :param out_layers: Tuple containing the number of neurons for the output layers.</span>
+
+<span class="sd">    :param show_shape: Whether to print shape of the intermediate tensors.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">pos_emd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;sum&quot;</span>
+
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">128</span>
+
+    <span class="n">ff_mul</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+
+    <span class="n">ff_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span>
+
+    <span class="n">ff_act</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;gelu&quot;</span>
+
+    <span class="n">extractor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">extractor_pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;flat2d&quot;</span>
+
+    <span class="n">pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;first&quot;</span>
+
+    <span class="n">out_layers</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+    <span class="n">show_shape</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nd">@dataclass</span>
+
+<span class="k">class</span> <span class="nc">GridTransformerParameters</span><span class="p">(</span><span class="n">TransformerParameters</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Class that holds parameters for grid_transformer models.</span>
+
+<span class="sd">    :param extractor: Type of extractor to use for the image sequence. Can be &#39;ef&#39; for EfficientNet or &#39;res&#39; for ResNet.</span>
+
+<span class="sd">    :param extractor_shape: The shape of the extracted features from the extractor.</span>
+
+<span class="sd">    :param last: How to handle the last element of the sequence, can be &#39;start&#39; to make it the first element or &#39;end&#39; to make it the last element</span>
+
+<span class="sd">    :param map_fn: The function used to map the image sequence, can be &#39;batch&#39; or &#39;map&#39;</span>
+
+<span class="sd">    :param last_index: The index of the last element of the sequence</span>
+
+<span class="sd">    :param channel: The channel used to map the image sequence, can be &#39;channel&#39; or &#39;spatial&#39;</span>
+
+<span class="sd">    :param batch_no: Number of batches to use for the map function</span>
+
+<span class="sd">    :param col: Number of columns in the image sequence</span>
+
+<span class="sd">    :param row: Number of rows in the image sequence</span>
+
+<span class="sd">    :param return_extractor_input: Whether to return the input to the extractor</span>
+
+<span class="sd">    :param return_attention_scores: Whether to return the attention scores</span>
+
+<span class="sd">    :param mask: The masking strategy to use, can be &#39;last&#39; or &#39;all&#39;</span>
+
+<span class="sd">    :param pre: Preprocessing function to use on the image sequence, can be &#39;normalize&#39; or &#39;standardize&#39;</span>
+
+<span class="sd">    :param noise: Noise function to use on the image sequence, can be &#39;gaussian&#39; or &#39;poisson&#39;</span>
+
+<span class="sd">    :param augmentation: Augmentation function to use on the image sequence, can be &#39;random_rotate&#39; or &#39;random_flip&#39;</span>
+
+<span class="sd">    :param print_: Whether to print information about the model</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">extractor</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="s2">&quot;ef&quot;</span>
+
+    <span class="n">extractor_shape</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">84</span>
+
+    <span class="n">last</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span>  <span class="s2">&quot;start&quot;</span>
+
+    <span class="n">map_fn</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;batch&quot;</span>
+
+    <span class="n">last_index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">channel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;channel&quot;</span>
+
+    <span class="n">batch_no</span><span class="p">:</span> <span class="nb">int</span>  <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">col</span><span class="p">:</span> <span class="nb">int</span>  <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">row</span><span class="p">:</span> <span class="nb">int</span>  <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">return_extractor_input</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">return_attention_scores</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">mask</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;last&quot;</span>
+
+    <span class="n">pre</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">noise</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">augmentation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">print_</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="nd">@dataclass</span>
+
+<span class="k">class</span> <span class="nc">MidTransformerParameters</span><span class="p">(</span><span class="n">TransformerParameters</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Class that holds parameters for Mid-level Transformer models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">256</span>
+
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span>
+
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="nd">@dataclass</span>
+
+<span class="k">class</span> <span class="nc">SmallTransformerParameters</span><span class="p">(</span><span class="n">TransformerParameters</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Class that holds parameters for Small-level Transformer models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">64</span>
+
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="nd">@dataclass</span>
+
+<span class="k">class</span> <span class="nc">BigTransformerParameters</span><span class="p">(</span><span class="n">TransformerParameters</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Class that holds parameters for Big-level Transformer models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">768</span>
+
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">12</span>
+
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="nd">@dataclass</span>
+
+<span class="k">class</span> <span class="nc">LargeTransformerParameters</span><span class="p">(</span><span class="n">TransformerParameters</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Class that holds parameters for Large-level Transformer models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span>
+
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16</span>
+
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">24</span>
+</code></pre></div>
+
+</details>
+<h2 id="classes">Classes</h2>
+<h3 id="bigtransformerparameters">BigTransformerParameters</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">BigTransformerParameters</span><span class="p">(</span>
+    <span class="n">pos_emd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span>
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">768</span><span class="p">,</span>
+    <span class="n">ff_mul</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">ff_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="n">ff_act</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;gelu&#39;</span><span class="p">,</span>
+    <span class="n">extractor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">extractor_pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;flat2d&#39;</span><span class="p">,</span>
+    <span class="n">pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+    <span class="n">out_layers</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="n">show_shape</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Class that holds parameters for Big-level Transformer models.</p>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="nv">@dataclass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="n">BigTransformerParameters</span><span class="p">(</span><span class="n">TransformerParameters</span><span class="p">)</span><span class="err">:</span>
+
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">    Class that holds parameters for Big-level Transformer models.</span>
+
+<span class="ss">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="k">size</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">768</span>
+
+<span class="w">    </span><span class="nl">num_heads</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span>
+
+<span class="w">    </span><span class="k">no</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span>
+</code></pre></div>
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro">Ancestors (in MRO)</h4>
+<ul>
+<li>grid_transformer.parameters.TransformerParameters</li>
+</ul>
+<h4 id="class-variables">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">dropout</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor_pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_act</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_mul</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_size</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">no</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">num_heads</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">out_layers</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pos_emd</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">show_shape</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">size</span>
+</code></pre></div>
+
+<h3 id="gridtransformerparameters">GridTransformerParameters</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">GridTransformerParameters</span><span class="p">(</span>
+    <span class="n">pos_emd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span>
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">128</span><span class="p">,</span>
+    <span class="n">ff_mul</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">ff_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">ff_act</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;gelu&#39;</span><span class="p">,</span>
+    <span class="n">extractor</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="s1">&#39;ef&#39;</span><span class="p">,</span>
+    <span class="n">extractor_pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;flat2d&#39;</span><span class="p">,</span>
+    <span class="n">pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+    <span class="n">out_layers</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="n">show_shape</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">extractor_shape</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">84</span><span class="p">,</span>
+    <span class="n">last</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;start&#39;</span><span class="p">,</span>
+    <span class="n">map_fn</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;batch&#39;</span><span class="p">,</span>
+    <span class="n">last_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">channel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;channel&#39;</span><span class="p">,</span>
+    <span class="n">batch_no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">col</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">row</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">return_extractor_input</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">return_attention_scores</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">mask</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;last&#39;</span><span class="p">,</span>
+    <span class="n">pre</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">noise</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">augmentation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">print_</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Class that holds parameters for grid_transformer models.</p>
+<h4 id="attributes">Attributes</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>extractor</td>
+<td>None</td>
+<td>Type of extractor to use for the image sequence. Can be 'ef' for EfficientNet or 'res' for ResNet.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>extractor_shape</td>
+<td>None</td>
+<td>The shape of the extracted features from the extractor.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>last</td>
+<td>None</td>
+<td>How to handle the last element of the sequence, can be 'start' to make it the first element or 'end' to make it the last element</td>
+<td>None</td>
+</tr>
+<tr>
+<td>map_fn</td>
+<td>None</td>
+<td>The function used to map the image sequence, can be 'batch' or 'map'</td>
+<td>None</td>
+</tr>
+<tr>
+<td>last_index</td>
+<td>None</td>
+<td>The index of the last element of the sequence</td>
+<td>None</td>
+</tr>
+<tr>
+<td>channel</td>
+<td>None</td>
+<td>The channel used to map the image sequence, can be 'channel' or 'spatial'</td>
+<td>None</td>
+</tr>
+<tr>
+<td>batch_no</td>
+<td>None</td>
+<td>Number of batches to use for the map function</td>
+<td>None</td>
+</tr>
+<tr>
+<td>col</td>
+<td>None</td>
+<td>Number of columns in the image sequence</td>
+<td>None</td>
+</tr>
+<tr>
+<td>row</td>
+<td>None</td>
+<td>Number of rows in the image sequence</td>
+<td>None</td>
+</tr>
+<tr>
+<td>return_extractor_input</td>
+<td>None</td>
+<td>Whether to return the input to the extractor</td>
+<td>None</td>
+</tr>
+<tr>
+<td>return_attention_scores</td>
+<td>None</td>
+<td>Whether to return the attention scores</td>
+<td>None</td>
+</tr>
+<tr>
+<td>mask</td>
+<td>None</td>
+<td>The masking strategy to use, can be 'last' or 'all'</td>
+<td>None</td>
+</tr>
+<tr>
+<td>pre</td>
+<td>None</td>
+<td>Preprocessing function to use on the image sequence, can be 'normalize' or 'standardize'</td>
+<td>None</td>
+</tr>
+<tr>
+<td>noise</td>
+<td>None</td>
+<td>Noise function to use on the image sequence, can be 'gaussian' or 'poisson'</td>
+<td>None</td>
+</tr>
+<tr>
+<td>augmentation</td>
+<td>None</td>
+<td>Augmentation function to use on the image sequence, can be 'random_rotate' or 'random_flip'</td>
+<td>None</td>
+</tr>
+<tr>
+<td>print_</td>
+<td>None</td>
+<td>Whether to print information about the model</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="nv">@dataclass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="n">GridTransformerParameters</span><span class="p">(</span><span class="n">TransformerParameters</span><span class="p">)</span><span class="err">:</span>
+
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">    Class that holds parameters for grid_transformer models.</span>
+
+<span class="ss">    :param extractor: Type of extractor to use for the image sequence. Can be &#39;ef&#39; for EfficientNet or &#39;res&#39; for ResNet.</span>
+
+<span class="ss">    :param extractor_shape: The shape of the extracted features from the extractor.</span>
+
+<span class="ss">    :param last: How to handle the last element of the sequence, can be &#39;start&#39; to make it the first element or &#39;end&#39; to make it the last element</span>
+
+<span class="ss">    :param map_fn: The function used to map the image sequence, can be &#39;batch&#39; or &#39;map&#39;</span>
+
+<span class="ss">    :param last_index: The index of the last element of the sequence</span>
+
+<span class="ss">    :param channel: The channel used to map the image sequence, can be &#39;channel&#39; or &#39;spatial&#39;</span>
+
+<span class="ss">    :param batch_no: Number of batches to use for the map function</span>
+
+<span class="ss">    :param col: Number of columns in the image sequence</span>
+
+<span class="ss">    :param row: Number of rows in the image sequence</span>
+
+<span class="ss">    :param return_extractor_input: Whether to return the input to the extractor</span>
+
+<span class="ss">    :param return_attention_scores: Whether to return the attention scores</span>
+
+<span class="ss">    :param mask: The masking strategy to use, can be &#39;last&#39; or &#39;all&#39;</span>
+
+<span class="ss">    :param pre: Preprocessing function to use on the image sequence, can be &#39;normalize&#39; or &#39;standardize&#39;</span>
+
+<span class="ss">    :param noise: Noise function to use on the image sequence, can be &#39;gaussian&#39; or &#39;poisson&#39;</span>
+
+<span class="ss">    :param augmentation: Augmentation function to use on the image sequence, can be &#39;random_rotate&#39; or &#39;random_flip&#39;</span>
+
+<span class="ss">    :param print_: Whether to print information about the model</span>
+
+<span class="ss">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="nl">extractor</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;ef&quot;</span>
+
+<span class="w">    </span><span class="nl">extractor_shape</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">84</span>
+
+<span class="w">    </span><span class="k">last</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="ss">&quot;start&quot;</span>
+
+<span class="w">    </span><span class="nl">map_fn</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;batch&quot;</span>
+
+<span class="w">    </span><span class="n">last_index</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span>
+
+<span class="w">    </span><span class="nl">channel</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;channel&quot;</span>
+
+<span class="w">    </span><span class="nl">batch_no</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">None</span>
+
+<span class="w">    </span><span class="nl">col</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+
+<span class="w">    </span><span class="k">row</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+
+<span class="w">    </span><span class="nl">return_extractor_input</span><span class="p">:</span><span class="w"> </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
+
+<span class="w">    </span><span class="nl">return_attention_scores</span><span class="p">:</span><span class="w"> </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
+
+<span class="w">    </span><span class="nl">mask</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;last&quot;</span>
+
+<span class="w">    </span><span class="nl">pre</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span>
+
+<span class="w">    </span><span class="nl">noise</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span>
+
+<span class="w">    </span><span class="nl">augmentation</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span>
+
+<span class="w">    </span><span class="nl">print_</span><span class="p">:</span><span class="w"> </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
+</code></pre></div>
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro_1">Ancestors (in MRO)</h4>
+<ul>
+<li>grid_transformer.parameters.TransformerParameters</li>
+</ul>
+<h4 id="class-variables_1">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">augmentation</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">batch_no</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">channel</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">col</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">dropout</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor_pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor_shape</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_act</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_mul</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_size</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">last</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">last_index</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">map_fn</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">mask</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">no</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">noise</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">num_heads</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">out_layers</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pos_emd</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pre</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">print_</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">return_attention_scores</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">return_extractor_input</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">row</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">show_shape</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">size</span>
+</code></pre></div>
+
+<h3 id="largetransformerparameters">LargeTransformerParameters</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">LargeTransformerParameters</span><span class="p">(</span>
+    <span class="n">pos_emd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span>
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span>
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+    <span class="n">ff_mul</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">ff_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="n">ff_act</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;gelu&#39;</span><span class="p">,</span>
+    <span class="n">extractor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">extractor_pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;flat2d&#39;</span><span class="p">,</span>
+    <span class="n">pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+    <span class="n">out_layers</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="n">show_shape</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Class that holds parameters for Large-level Transformer models.</p>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="nv">@dataclass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="n">LargeTransformerParameters</span><span class="p">(</span><span class="n">TransformerParameters</span><span class="p">)</span><span class="err">:</span>
+
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">    Class that holds parameters for Large-level Transformer models.</span>
+
+<span class="ss">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="k">size</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1024</span>
+
+<span class="w">    </span><span class="nl">num_heads</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span>
+
+<span class="w">    </span><span class="k">no</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">24</span>
+</code></pre></div>
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro_2">Ancestors (in MRO)</h4>
+<ul>
+<li>grid_transformer.parameters.TransformerParameters</li>
+</ul>
+<h4 id="class-variables_2">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">dropout</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor_pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_act</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_mul</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_size</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">no</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">num_heads</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">out_layers</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pos_emd</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">show_shape</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">size</span>
+</code></pre></div>
+
+<h3 id="midtransformerparameters">MidTransformerParameters</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MidTransformerParameters</span><span class="p">(</span>
+    <span class="n">pos_emd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span>
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+    <span class="n">ff_mul</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">ff_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">ff_act</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;gelu&#39;</span><span class="p">,</span>
+    <span class="n">extractor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">extractor_pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;flat2d&#39;</span><span class="p">,</span>
+    <span class="n">pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+    <span class="n">out_layers</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="n">show_shape</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Class that holds parameters for Mid-level Transformer models.</p>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="nv">@dataclass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="n">MidTransformerParameters</span><span class="p">(</span><span class="n">TransformerParameters</span><span class="p">)</span><span class="err">:</span>
+
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">    Class that holds parameters for Mid-level Transformer models.</span>
+
+<span class="ss">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="k">size</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span>
+
+<span class="w">    </span><span class="nl">num_heads</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span>
+
+<span class="w">    </span><span class="k">no</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+</code></pre></div>
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro_3">Ancestors (in MRO)</h4>
+<ul>
+<li>grid_transformer.parameters.TransformerParameters</li>
+</ul>
+<h4 id="class-variables_3">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">dropout</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor_pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_act</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_mul</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_size</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">no</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">num_heads</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">out_layers</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pos_emd</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">show_shape</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">size</span>
+</code></pre></div>
+
+<h3 id="smalltransformerparameters">SmallTransformerParameters</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">SmallTransformerParameters</span><span class="p">(</span>
+    <span class="n">pos_emd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span>
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span>
+    <span class="n">ff_mul</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">ff_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">ff_act</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;gelu&#39;</span><span class="p">,</span>
+    <span class="n">extractor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">extractor_pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;flat2d&#39;</span><span class="p">,</span>
+    <span class="n">pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+    <span class="n">out_layers</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="n">show_shape</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Class that holds parameters for Small-level Transformer models.</p>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="nv">@dataclass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="n">SmallTransformerParameters</span><span class="p">(</span><span class="n">TransformerParameters</span><span class="p">)</span><span class="err">:</span>
+
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">    Class that holds parameters for Small-level Transformer models.</span>
+
+<span class="ss">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="k">size</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span>
+
+<span class="w">    </span><span class="nl">num_heads</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+
+<span class="w">    </span><span class="k">no</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+</code></pre></div>
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro_4">Ancestors (in MRO)</h4>
+<ul>
+<li>grid_transformer.parameters.TransformerParameters</li>
+</ul>
+<h4 id="class-variables_4">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">dropout</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor_pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_act</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_mul</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_size</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">no</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">num_heads</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">out_layers</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pos_emd</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">show_shape</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">size</span>
+</code></pre></div>
+
+<h3 id="transformerparameters">TransformerParameters</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">TransformerParameters</span><span class="p">(</span>
+    <span class="n">pos_emd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span>
+    <span class="n">no</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">128</span><span class="p">,</span>
+    <span class="n">ff_mul</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">ff_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dropout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">num_heads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="n">ff_act</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;gelu&#39;</span><span class="p">,</span>
+    <span class="n">extractor</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">extractor_pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;flat2d&#39;</span><span class="p">,</span>
+    <span class="n">pooling</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+    <span class="n">out_layers</span><span class="p">:</span> <span class="n">Tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="n">show_shape</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>Class that holds parameters for Transformer models.</p>
+<h4 id="attributes_1">Attributes</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pos_emd</td>
+<td>None</td>
+<td>Type of position embedding. Can be 'sum' or 'cat'.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>no</td>
+<td>None</td>
+<td>Number of layers in the Transformer encoder.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>size</td>
+<td>None</td>
+<td>Dimension of the hidden states and the self-attention layers.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>ff_mul</td>
+<td>None</td>
+<td>Multiplier for the dimension of the feed-forward layers.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>ff_size</td>
+<td>None</td>
+<td>Dimension of the feed-forward layers. If None, it is set to size * ff_mul.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>dropout</td>
+<td>None</td>
+<td>Dropout rate for the self-attention and feed-forward layers.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>num_heads</td>
+<td>None</td>
+<td>Number of heads in the multi-head self-attention layers.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>ff_act</td>
+<td>None</td>
+<td>Activation function for the feed-forward layers. Can be 'relu' or 'gelu'.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>extractor</td>
+<td>None</td>
+<td>Type of extractor to use before the transformer layers. Can be 'cnn' or 'rnn'.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>extractor_pooling</td>
+<td>None</td>
+<td>Type of pooling to use after the extractor. Can be 'first' or 'flat2d'.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>pooling</td>
+<td>None</td>
+<td>Type of pooling to use after the transformer layers. Can be 'first' or 'mean'.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>out_layers</td>
+<td>None</td>
+<td>Tuple containing the number of neurons for the output layers.</td>
+<td>None</td>
+</tr>
+<tr>
+<td>show_shape</td>
+<td>None</td>
+<td>Whether to print shape of the intermediate tensors.</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="nv">@dataclass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nl">TransformerParameters</span><span class="p">:</span>
+
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">    Class that holds parameters for Transformer models.</span>
+
+<span class="ss">    :param pos_emd: Type of position embedding. Can be &#39;sum&#39; or &#39;cat&#39;.</span>
+
+<span class="ss">    :param no: Number of layers in the Transformer encoder.</span>
+
+<span class="ss">    :param size: Dimension of the hidden states and the self-attention layers.</span>
+
+<span class="ss">    :param ff_mul: Multiplier for the dimension of the feed-forward layers.</span>
+
+<span class="ss">    :param ff_size: Dimension of the feed-forward layers. If None, it is set to size * ff_mul.</span>
+
+<span class="ss">    :param dropout: Dropout rate for the self-attention and feed-forward layers.</span>
+
+<span class="ss">    :param num_heads: Number of heads in the multi-head self-attention layers.</span>
+
+<span class="ss">    :param ff_act: Activation function for the feed-forward layers. Can be &#39;relu&#39; or &#39;gelu&#39;.</span>
+
+<span class="ss">    :param extractor: Type of extractor to use before the transformer layers. Can be &#39;cnn&#39; or &#39;rnn&#39;.</span>
+
+<span class="ss">    :param extractor_pooling: Type of pooling to use after the extractor. Can be &#39;first&#39; or &#39;flat2d&#39;.</span>
+
+<span class="ss">    :param pooling: Type of pooling to use after the transformer layers. Can be &#39;first&#39; or &#39;mean&#39;.</span>
+
+<span class="ss">    :param out_layers: Tuple containing the number of neurons for the output layers.</span>
+
+<span class="ss">    :param show_shape: Whether to print shape of the intermediate tensors.</span>
+
+<span class="ss">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="nl">pos_emd</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;sum&quot;</span>
+
+<span class="w">    </span><span class="k">no</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+
+<span class="w">    </span><span class="k">size</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">128</span>
+
+<span class="w">    </span><span class="nl">ff_mul</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+
+<span class="w">    </span><span class="nl">ff_size</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span>
+
+<span class="w">    </span><span class="nl">dropout</span><span class="p">:</span><span class="w"> </span><span class="nc">float</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span>
+
+<span class="w">    </span><span class="nl">num_heads</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span>
+
+<span class="w">    </span><span class="nl">ff_act</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;gelu&quot;</span>
+
+<span class="w">    </span><span class="nl">extractor</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span>
+
+<span class="w">    </span><span class="nl">extractor_pooling</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;flat2d&quot;</span>
+
+<span class="w">    </span><span class="nl">pooling</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;first&quot;</span>
+
+<span class="w">    </span><span class="nl">out_layers</span><span class="p">:</span><span class="w"> </span><span class="n">Tuple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nl">show_shape</span><span class="p">:</span><span class="w"> </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+</code></pre></div>
+
+</details>
+<hr />
+<h4 id="descendants">Descendants</h4>
+<ul>
+<li>grid_transformer.parameters.GridTransformerParameters</li>
+<li>grid_transformer.parameters.MidTransformerParameters</li>
+<li>grid_transformer.parameters.SmallTransformerParameters</li>
+<li>grid_transformer.parameters.BigTransformerParameters</li>
+<li>grid_transformer.parameters.LargeTransformerParameters</li>
+</ul>
+<h4 id="class-variables_5">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">dropout</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">extractor_pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_act</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_mul</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">ff_size</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">no</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">num_heads</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">out_layers</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pooling</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">pos_emd</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">show_shape</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">size</span>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+    
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../mask/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mask" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Mask
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../position_embedding/" class="md-footer__link md-footer__link--next" aria-label="Next: Position Embedding" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Position Embedding
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+            
+            Powered by
+            <a href="http://timothycrosley.github.io/portray">portray.</a>
+            You too can
+            <a href="http://timothycrosley.github.io/portray">
+              portray</a>
+            your Python project well using automatic documentation.
+          </div>
+        
+      </div>
+    </div>
+  </footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>

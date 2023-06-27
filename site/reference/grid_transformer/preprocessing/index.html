@@ -1,0 +1,1381 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.4">
+    
+    
+      
+        <title>Preprocessing - grid_transformer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.80dcb947.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-grid_transformerpreprocessing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="grid_transformer" class="md-header__button md-logo" aria-label="grid_transformer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            grid_transformer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Preprocessing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jakubkwiatkowski/grid_transformer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    grid_transformer
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="grid_transformer" class="md-nav__button md-logo" aria-label="grid_transformer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    grid_transformer
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jakubkwiatkowski/grid_transformer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    grid_transformer
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/raven/" class="md-nav__link">
+        Raven
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/sudoku/" class="md-nav__link">
+        Sudoku
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Grid Transformer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Grid Transformer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Grid Transformer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augmentation/" class="md-nav__link">
+        Augmentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../augmented_transformer/" class="md-nav__link">
+        Augmented Transformer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grid_transformer/" class="md-nav__link">
+        Grid Transformer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layers/" class="md-nav__link">
+        Layers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mask/" class="md-nav__link">
+        Mask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameters/" class="md-nav__link">
+        Parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../position_embedding/" class="md-nav__link">
+        Position Embedding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Preprocessing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Preprocessing
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_images" class="md-nav__link">
+    get_images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_images_no_answer" class="md-nav__link">
+    get_images_no_answer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_images_with_index" class="md-nav__link">
+    get_images_with_index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_matrix" class="md-nav__link">
+    get_matrix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random_last" class="md-nav__link">
+    random_last
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeat_last" class="md-nav__link">
+    repeat_last
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simple_transformer/" class="md-nav__link">
+        Simple Transformer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformer/" class="md-nav__link">
+        Transformer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformer_block/" class="md-nav__link">
+        Transformer Block
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_images" class="md-nav__link">
+    get_images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_images_no_answer" class="md-nav__link">
+    get_images_no_answer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_images_with_index" class="md-nav__link">
+    get_images_with_index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_matrix" class="md-nav__link">
+    get_matrix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random_last" class="md-nav__link">
+    random_last
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeat_last" class="md-nav__link">
+    repeat_last
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/jakubkwiatkowski/grid_transformer/edit/main/reference/grid_transformer/preprocessing.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="module-grid_transformerpreprocessing">Module grid_transformer.preprocessing</h1>
+<p>This module contains functions for preprocessing input data for use in a transformer model.</p>
+<p>The functions in this module are used to create the initial grid for the model.</p>
+<p>The <code>get_matrix</code> function takes in an input tensor and an index tensor, and returns a new tensor that is a concatenation of the first <code>last_index</code> elements of the input tensor, and the element at the index specified in the index tensor. The <code>last_index</code> parameter defaults to 8.</p>
+<p>The <code>get_images</code> function takes in a tuple containing the input tensor and the indices tensor, and returns the output tensor obtained by calling the <code>get_matrix</code> function with these inputs. The <code>last_index</code> parameter defaults to 8.</p>
+<p>The <code>get_images_with_index</code> function takes in an input tensor, and an index and last_index and returns a tensor where the last element of the input tensor is replaced with the element at the specified index.</p>
+<p>The <code>random_last</code> function takes in an input tensor and a last_index and returns a tensor where the last element of the input tensor is replaced with a randomly chosen element from the input tensor.</p>
+<p>The <code>get_images_no_answer</code> function takes in an input tensor, an index and last_index and returns a tensor with last element removed from the input tensor.</p>
+<p>The <code>repeat_last</code> function takes in an input tensor, an index and last_index and returns a tensor where the last element of the input tensor is repeated.</p>
+<p>Example usage:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Get images based on indices</span>
+<span class="n">inputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">]])</span>
+<span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_images</span><span class="p">((</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># output will be [[1, 2, 4], [4, 5, 7], [7, 8, 1]]</span>
+
+<span class="c1"># Get images with specific index</span>
+<span class="n">inputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">]])</span>
+<span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_images_with_index</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">),</span><span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">last_index</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># output will be [[1, 2, 2], [4, 5, 5], [7, 8, 8]]</span>
+
+<span class="c1"># Get images with random index</span>
+<span class="n">inputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">]])</span>
+<span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random_last</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">),</span><span class="w"> </span><span class="n">last_index</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># output will be [[1, 2, 3], [4, 5, 6], [7, 8, 9]]</span>
+
+<span class="c1"># Get images without answer</span>
+<span class="n">inputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">]])</span>
+<span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_images_no_answer</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">),</span><span class="w"> </span><span class="n">last_index</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># output will be [[1, 2], [4, 5], [7, 8]]</span>
+
+<span class="c1"># Get images by repeating last</span>
+<span class="n">inputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">]])</span>
+<span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repeat_last</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">),</span><span class="w"> </span><span class="n">last_index</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># output will be [[1, 2, 2], [4, 5, 5], [7, 8, 8]]</span>
+</code></pre></div>
+
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="s2">&quot;</span><span class="se">&quot;&quot;</span>
+
+<span class="s2">This module contains functions for preprocessing input data for use in a transformer model.</span>
+
+<span class="s2">The functions in this module are used to create the initial grid for the model.</span>
+
+<span class="s2">The `get_matrix` function takes in an input tensor and an index tensor, and returns a new tensor that is a concatenation of the first `last_index` elements of the input tensor, and the element at the index specified in the index tensor. The `last_index` parameter defaults to 8.</span>
+
+<span class="s2">The `get_images` function takes in a tuple containing the input tensor and the indices tensor, and returns the output tensor obtained by calling the `get_matrix` function with these inputs. The `last_index` parameter defaults to 8.</span>
+
+<span class="s2">The `get_images_with_index` function takes in an input tensor, and an index and last_index and returns a tensor where the last element of the input tensor is replaced with the element at the specified index.</span>
+
+<span class="s2">The `random_last` function takes in an input tensor and a last_index and returns a tensor where the last element of the input tensor is replaced with a randomly chosen element from the input tensor.</span>
+
+<span class="s2">The `get_images_no_answer` function takes in an input tensor, an index and last_index and returns a tensor with last element removed from the input tensor.</span>
+
+<span class="s2">The `repeat_last` function takes in an input tensor, an index and last_index and returns a tensor where the last element of the input tensor is repeated.</span>
+
+<span class="s2">Example usage:</span>
+
+<span class="s2">    # Get images based on indices</span>
+
+<span class="s2">    inputs = tf.constant([[1, 2, 3], [4, 5, 6], [7, 8, 9]])</span>
+
+<span class="s2">    index = tf.constant([[1], [2], [0]])</span>
+
+<span class="s2">    output = get_images((inputs, index), 2)</span>
+
+<span class="s2">    # output will be [[1, 2, 4], [4, 5, 7], [7, 8, 1]]</span>
+
+<span class="s2">    # Get images with specific index</span>
+
+<span class="s2">    inputs = tf.constant([[1, 2, 3], [4, 5, 6], [7, 8, 9]])</span>
+
+<span class="s2">    output = get_images_with_index(inputs, index),index=1, last_index=2)</span>
+
+<span class="s2">    # output will be [[1, 2, 2], [4, 5, 5], [7, 8, 8]]</span>
+
+<span class="s2">    # Get images with random index</span>
+
+<span class="s2">    inputs = tf.constant([[1, 2, 3], [4, 5, 6], [7, 8, 9]])</span>
+
+<span class="s2">    output = random_last(inputs, index), last_index=2)</span>
+
+<span class="s2">    # output will be [[1, 2, 3], [4, 5, 6], [7, 8, 9]]</span>
+
+<span class="s2">    # Get images without answer</span>
+
+<span class="s2">    inputs = tf.constant([[1, 2, 3], [4, 5, 6], [7, 8, 9]])</span>
+
+<span class="s2">    output = get_images_no_answer(inputs, index), last_index=2)</span>
+
+<span class="s2">    # output will be [[1, 2], [4, 5], [7, 8]]</span>
+
+<span class="s2">    # Get images by repeating last</span>
+
+<span class="s2">    inputs = tf.constant([[1, 2, 3], [4, 5, 6], [7, 8, 9]])</span>
+
+<span class="s2">    output = repeat_last(inputs, index), last_index=2)</span>
+
+<span class="s2">    # output will be [[1, 2, 2], [4, 5, 5], [7, 8, 8]]</span>
+
+<span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="k">from</span><span class="w"> </span><span class="n">typing</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="n">Tuple</span>
+
+<span class="k">import</span><span class="w"> </span><span class="n">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">tf</span>
+
+<span class="k">from</span><span class="w"> </span><span class="n">models_utils</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="n">ops</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">K</span>
+
+<span class="n">def</span><span class="w"> </span><span class="n">get_matrix</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="k">index</span><span class="o">:</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s2">&quot;</span><span class="se">&quot;&quot;</span>
+
+<span class="s2">    Returns a tensor of shape (batch_size, last_index+1) which is a concatenation of inputs[:, :last_index] and K.gather(inputs, index[:, 0])[:, None]</span>
+
+<span class="s2">    :param inputs : a tensor of shape (batch_size, features)</span>
+
+<span class="s2">    :param index : a tensor of shape (batch_size, 1) representing the index of the element to be selected from inputs</span>
+
+<span class="s2">    :param last_index : an int representing the index from where to split the input tensor. Default value is 8</span>
+
+<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="nf">concat</span><span class="p">(</span><span class="err">[</span><span class="n">inputs</span><span class="err">[</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="n">last_index</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">.</span><span class="n">gather</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="k">index</span><span class="err">[</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="err">]</span><span class="p">)</span><span class="err">[</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="k">None</span><span class="err">]]</span><span class="p">,</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">def</span><span class="w"> </span><span class="n">get_images</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">Tuple</span><span class="err">[</span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s2">&quot;</span><span class="se">&quot;&quot;</span>
+
+<span class="s2">    Get images based on indices in the input tensor.</span>
+
+<span class="s2">    :param inputs: Tuple containing the input tensor and indices tensor</span>
+
+<span class="s2">    :param last_index: Index of last element to be included in the output tensor</span>
+
+<span class="s2">    :return: Output tensor</span>
+
+<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">get_matrix</span><span class="p">(</span><span class="n">inputs</span><span class="err">[</span><span class="mi">0</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="n">inputs</span><span class="err">[</span><span class="mi">1</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="n">last_index</span><span class="o">=</span><span class="n">last_index</span><span class="p">)</span>
+
+<span class="n">def</span><span class="w"> </span><span class="n">get_images_with_index</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">Tuple</span><span class="err">[</span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="k">index</span><span class="o">:</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s2">&quot;</span><span class="se">&quot;&quot;</span>
+
+<span class="s2">    Get images from input tensor along with specific index.</span>
+
+<span class="s2">    :param inputs: Tuple containing the input tensor and indices tensor</span>
+
+<span class="s2">    :param index: Index of the element to be included in the output tensor</span>
+
+<span class="s2">    :param last_index: Index of last element to be included in the output tensor</span>
+
+<span class="s2">    :return: Output tensor</span>
+
+<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="nf">concat</span><span class="p">(</span><span class="err">[</span><span class="n">inputs</span><span class="err">[</span><span class="mi">0</span><span class="err">][</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="n">last_index</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="n">inputs</span><span class="err">[</span><span class="mi">0</span><span class="err">][</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="k">index</span><span class="o">:</span><span class="k">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="err">]]</span><span class="p">,</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">def</span><span class="w"> </span><span class="n">random_last</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">Tuple</span><span class="err">[</span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s2">&quot;</span><span class="se">&quot;&quot;</span>
+
+<span class="s2">    Get images from input tensor along with a randomly chosen index.</span>
+
+<span class="s2">    :param inputs: Tuple containing the input tensor and indices tensor</span>
+
+<span class="s2">    :param last_index: Index of last element to be included in the output tensor</span>
+
+<span class="s2">    :return: Output tensor</span>
+
+<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="w">    </span><span class="k">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K</span><span class="p">.</span><span class="n">init</span><span class="p">.</span><span class="n">label</span><span class="p">(</span><span class="n">max</span><span class="o">=</span><span class="n">last_index</span><span class="p">,</span><span class="w"> </span><span class="n">shape</span><span class="o">=</span><span class="err">[</span><span class="n">tf</span><span class="p">.</span><span class="n">shape</span><span class="p">(</span><span class="n">inputs</span><span class="err">[</span><span class="mi">0</span><span class="err">]</span><span class="p">)</span><span class="err">[</span><span class="mi">0</span><span class="err">]]</span><span class="p">)</span><span class="err">[</span><span class="p">...,</span><span class="w"> </span><span class="k">None</span><span class="err">]</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">get_matrix</span><span class="p">(</span><span class="n">inputs</span><span class="err">[</span><span class="mi">0</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="k">index</span><span class="p">)</span>
+
+<span class="n">def</span><span class="w"> </span><span class="n">get_images_no_answer</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">Tuple</span><span class="err">[</span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s2">&quot;</span><span class="se">&quot;&quot;</span>
+
+<span class="s2">    Get images from input tensor without including any answer.</span>
+
+<span class="s2">    :param inputs: Tuple containing the input tensor and indices tensor</span>
+
+<span class="s2">    :param last_index: Index of last element to be included in the output tensor</span>
+
+<span class="s2">    :return: Output tensor</span>
+
+<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">inputs</span><span class="err">[</span><span class="mi">0</span><span class="err">][</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="n">last_index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="err">]</span>
+
+<span class="n">def</span><span class="w"> </span><span class="n">repeat_last</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">Tuple</span><span class="err">[</span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s2">&quot;</span><span class="se">&quot;&quot;</span>
+
+<span class="s2">    Get images from input tensor by repeating the last element.</span>
+
+<span class="s2">    :param inputs: Tuple containing the input tensor and indices tensor</span>
+
+<span class="s2">    :param last_index: Index of last element to be included in the output tensor</span>
+
+<span class="s2">    :return: Output tensor</span>
+
+<span class="s2">    </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">inputs</span><span class="err">[</span><span class="mi">0</span><span class="err">][</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="k">list</span><span class="p">(</span><span class="k">range</span><span class="p">(</span><span class="n">last_index</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="err">[</span><span class="n">last_index</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="err">]]</span>
+</code></pre></div>
+
+</details>
+<h2 id="functions">Functions</h2>
+<h3 id="get_images">get_images</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_images</span><span class="p">(</span>
+    <span class="n">inputs</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
+    <span class="n">last_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span>
+</code></pre></div>
+
+<p>Get images based on indices in the input tensor.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inputs</td>
+<td>None</td>
+<td>Tuple containing the input tensor and indices tensor</td>
+<td>None</td>
+</tr>
+<tr>
+<td>last_index</td>
+<td>None</td>
+<td>Index of last element to be included in the output tensor</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Output tensor</td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">get_images</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">Tuple</span><span class="p">[</span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">],</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+
+<span class="s">    Get images based on indices in the input tensor.</span>
+
+<span class="s">    :param inputs: Tuple containing the input tensor and indices tensor</span>
+
+<span class="s">    :param last_index: Index of last element to be included in the output tensor</span>
+
+<span class="s">    :return: Output tensor</span>
+
+<span class="s">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">get_matrix</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">inputs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">last_index</span><span class="o">=</span><span class="n">last_index</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+<h3 id="get_images_no_answer">get_images_no_answer</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_images_no_answer</span><span class="p">(</span>
+    <span class="n">inputs</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
+    <span class="n">last_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span>
+</code></pre></div>
+
+<p>Get images from input tensor without including any answer.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inputs</td>
+<td>None</td>
+<td>Tuple containing the input tensor and indices tensor</td>
+<td>None</td>
+</tr>
+<tr>
+<td>last_index</td>
+<td>None</td>
+<td>Index of last element to be included in the output tensor</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Output tensor</td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">get_images_no_answer</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">Tuple</span><span class="p">[</span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">],</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+
+<span class="s">    Get images from input tensor without including any answer.</span>
+
+<span class="s">    :param inputs: Tuple containing the input tensor and indices tensor</span>
+
+<span class="s">    :param last_index: Index of last element to be included in the output tensor</span>
+
+<span class="s">    :return: Output tensor</span>
+
+<span class="s">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="n">last_index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+
+</details>
+<h3 id="get_images_with_index">get_images_with_index</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_images_with_index</span><span class="p">(</span>
+    <span class="n">inputs</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
+    <span class="n">index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">last_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span>
+</code></pre></div>
+
+<p>Get images from input tensor along with specific index.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inputs</td>
+<td>None</td>
+<td>Tuple containing the input tensor and indices tensor</td>
+<td>None</td>
+</tr>
+<tr>
+<td>index</td>
+<td>None</td>
+<td>Index of the element to be included in the output tensor</td>
+<td>None</td>
+</tr>
+<tr>
+<td>last_index</td>
+<td>None</td>
+<td>Index of last element to be included in the output tensor</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Output tensor</td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">get_images_with_index</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">Tuple</span><span class="p">[</span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">],</span><span class="w"> </span><span class="nf">index</span><span class="o">:</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+
+<span class="s">    Get images from input tensor along with specific index.</span>
+
+<span class="s">    :param inputs: Tuple containing the input tensor and indices tensor</span>
+
+<span class="s">    :param index: Index of the element to be included in the output tensor</span>
+
+<span class="s">    :param last_index: Index of last element to be included in the output tensor</span>
+
+<span class="s">    :return: Output tensor</span>
+
+<span class="s">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="n">last_index</span><span class="p">],</span><span class="w"> </span><span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="nf">index</span><span class="o">:</span><span class="nf">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]],</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+<h3 id="get_matrix">get_matrix</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_matrix</span><span class="p">(</span>
+    <span class="n">inputs</span><span class="p">:</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span>
+    <span class="n">index</span><span class="p">:</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span>
+    <span class="n">last_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span>
+</code></pre></div>
+
+<p>Returns a tensor of shape (batch_size, last_index+1) which is a concatenation of inputs[:, :last_index] and K.gather(inputs, index[:, 0])[:, None]</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inputs</td>
+<td>None</td>
+<td>a tensor of shape (batch_size, features)</td>
+<td>None</td>
+</tr>
+<tr>
+<td>index</td>
+<td>None</td>
+<td>a tensor of shape (batch_size, 1) representing the index of the element to be selected from inputs</td>
+<td>None</td>
+</tr>
+<tr>
+<td>last_index</td>
+<td>None</td>
+<td>an int representing the index from where to split the input tensor. Default value is 8</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">get_matrix</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="nf">index</span><span class="o">:</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+
+<span class="s">    Returns a tensor of shape (batch_size, last_index+1) which is a concatenation of inputs[:, :last_index] and K.gather(inputs, index[:, 0])[:, None]</span>
+
+<span class="s">    :param inputs : a tensor of shape (batch_size, features)</span>
+
+<span class="s">    :param index : a tensor of shape (batch_size, 1) representing the index of the element to be selected from inputs</span>
+
+<span class="s">    :param last_index : an int representing the index from where to split the input tensor. Default value is 8</span>
+
+<span class="s">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">inputs</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="n">last_index</span><span class="p">],</span><span class="w"> </span><span class="n">K</span><span class="p">.</span><span class="n">gather</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="nf">index</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">])[</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="n">None</span><span class="p">]],</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+<h3 id="random_last">random_last</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">random_last</span><span class="p">(</span>
+    <span class="n">inputs</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
+    <span class="n">last_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span>
+</code></pre></div>
+
+<p>Get images from input tensor along with a randomly chosen index.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inputs</td>
+<td>None</td>
+<td>Tuple containing the input tensor and indices tensor</td>
+<td>None</td>
+</tr>
+<tr>
+<td>last_index</td>
+<td>None</td>
+<td>Index of last element to be included in the output tensor</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Output tensor</td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">random_last</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">Tuple</span><span class="p">[</span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">],</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+
+<span class="s">    Get images from input tensor along with a randomly chosen index.</span>
+
+<span class="s">    :param inputs: Tuple containing the input tensor and indices tensor</span>
+
+<span class="s">    :param last_index: Index of last element to be included in the output tensor</span>
+
+<span class="s">    :return: Output tensor</span>
+
+<span class="s">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="nf">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K</span><span class="p">.</span><span class="n">init</span><span class="p">.</span><span class="n">label</span><span class="p">(</span><span class="nf">max</span><span class="o">=</span><span class="n">last_index</span><span class="p">,</span><span class="w"> </span><span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="n">tf</span><span class="p">.</span><span class="n">shape</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">])[</span><span class="mi">0</span><span class="p">]])[...,</span><span class="w"> </span><span class="n">None</span><span class="p">]</span>
+
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">get_matrix</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="nf">index</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
+<h3 id="repeat_last">repeat_last</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">repeat_last</span><span class="p">(</span>
+    <span class="n">inputs</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
+    <span class="n">last_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">Tensor</span>
+</code></pre></div>
+
+<p>Get images from input tensor by repeating the last element.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inputs</td>
+<td>None</td>
+<td>Tuple containing the input tensor and indices tensor</td>
+<td>None</td>
+</tr>
+<tr>
+<td>last_index</td>
+<td>None</td>
+<td>Index of last element to be included in the output tensor</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Output tensor</td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>View Source</summary>
+<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">repeat_last</span><span class="p">(</span><span class="n">inputs</span><span class="o">:</span><span class="w"> </span><span class="n">Tuple</span><span class="p">[</span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">,</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="p">],</span><span class="w"> </span><span class="n">last_index</span><span class="o">:</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">tf</span><span class="p">.</span><span class="n">Tensor</span><span class="o">:</span>
+
+<span class="w">    </span><span class="s">&quot;&quot;&quot;</span>
+
+<span class="s">    Get images from input tensor by repeating the last element.</span>
+
+<span class="s">    :param inputs: Tuple containing the input tensor and indices tensor</span>
+
+<span class="s">    :param last_index: Index of last element to be included in the output tensor</span>
+
+<span class="s">    :return: Output tensor</span>
+
+<span class="s">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">:</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="n">last_index</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">[</span><span class="n">last_index</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]]</span>
+</code></pre></div>
+
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+    
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../position_embedding/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Position Embedding" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Position Embedding
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../simple_transformer/" class="md-footer__link md-footer__link--next" aria-label="Next: Simple Transformer" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Simple Transformer
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+            
+            Powered by
+            <a href="http://timothycrosley.github.io/portray">portray.</a>
+            You too can
+            <a href="http://timothycrosley.github.io/portray">
+              portray</a>
+            your Python project well using automatic documentation.
+          </div>
+        
+      </div>
+    </div>
+  </footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>
