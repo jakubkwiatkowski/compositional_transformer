@@ -11,7 +11,7 @@ from functools import partial
 from typing import Union, List, Callable, Tuple
 
 from core_tools.core import TARGET, OUTPUT, INDEX, MASK, ATTENTION, IMAGE, LABELS, PREDICT, INPUT, INPUTS, \
-    InferencePass, lw, log_shape
+    InferencePass, lw, log_shape, il
 
 from grid_transformer import aug
 from grid_transformer.image_transformer import ImageTransformer
@@ -34,7 +34,7 @@ def GridTransformer(
         last_index: int = 8,
         pre: str = 'images',
         noise: Union[Tuple[str, float], float, None] = None,
-        mask: Union[str, int, Callable, None] = None,
+        mask: Union[str, int, Callable, None] = LAST,
         augmentation: Union[str, List[str], None] = None,
         root: int = 2,
         transpose: bool = True,

@@ -7,7 +7,7 @@ Functions:
 """
 from typing import Optional, Tuple, Callable, Union
 
-import models_utils.ops as K
+import core_tools.ops as K
 import tensorflow as tf
 from tensorflow.keras.layers import Dense
 

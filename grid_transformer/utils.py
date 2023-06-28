@@ -1,8 +1,8 @@
 import functools
 
 import numpy as np
-from ml_utils import il, format_
-from models_utils import BatchModel, Pooling, log_shape
+from core_tools.core import il, format_
+from core_tools.core import BatchModel, Pooling, log_shape
 
 from grid_transformer.constants import VEC
 from grid_transformer.layers import Vec, Detokenizer
